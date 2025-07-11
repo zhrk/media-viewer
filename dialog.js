@@ -5,7 +5,7 @@ let currentIndex = null;
 function openInViewer(index) {
   currentIndex = index;
 
-  const { url, type, path } = mediaFiles[index];
+  const { url, type } = mediaFiles[index];
 
   const element = type.startsWith('image/')
     ? document.createElement('img')
@@ -50,8 +50,6 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
       if (event.key === 'ArrowRight') updateCurrentIndex(true);
       if (event.key === 'ArrowLeft') updateCurrentIndex();
-
-      const file = mediaFiles[currentIndex];
 
       openInViewer(currentIndex);
     }
