@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- https://www.svgrepo.com/svg/525916/gallery -->
+    <link rel="icon" href="./favicon.svg" />
+    <title>Media Viewer</title>
+  </head>
+  <body>
+    <div id="meta" class="meta">
+      <div id="counter">0 / 0</div>
+    </div>
+
+    <div id="select" class="select">
+      <div>
+        <button type="button" onclick="selectFolder()">Select Folder</button>
+        <label>
+          <input checked id="shuffle" type="checkbox" />
+          Shuffle
+        </label>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <dialog></dialog>
+
+    <script src="shuffleArray.js"></script>
+    <script src="getAllFiles.js"></script>
+    <script src="getRandomTime.js"></script>
+    <script src="observer.js"></script>
+    <script src="selectFolder.js"></script>
+    <script src="dialog.js"></script>
+  </body>
+</html>
